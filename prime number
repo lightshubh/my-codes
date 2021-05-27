@@ -1,0 +1,98 @@
+#1: first method
+
+n=5
+i=1
+now_list=[]
+while i!=(n+1):
+    if n%i==0:
+        now_list.append(i)
+    i+=1
+        
+if len(now_list)>2:
+    print(str(n)+' is not prime')
+else:
+    print('it is prime number')
+    
+    
+    
+ #2: second method
+ 
+ def check_prime(n):   
+    i=1
+    now_list=[]
+    if n>=2:
+        while i!=(n+1):
+            if n%i==0:
+                now_list.append(i)
+            i+=1
+                
+        if len(now_list)>2:
+            print(str(n)+' is not a prime number')
+        else:
+            print(str(n)+' is a prime number')
+    else:
+        print('please enter a valid number')
+                
+                
+                
+#3: 3rd way:
+
+numbers=[5,1,8,4,7,9,6,3,2,4,5,7,100,99,67,59,39]
+i=1
+d_list=[]
+prime_list=[]
+for num in numbers:
+    if num<2:
+        continue
+    else:   
+        while i!=(num+1):
+            if num%i==0:
+                d_list.append(i)
+            i+=1
+                
+        if len(d_list)==2:
+            prime_list.append(num)
+    d_list=[]
+    i=1
+    
+    
+print(prime_list) 
+
+
+#4: 4th way:
+
+def prime_check_list(numbers=[]):   
+    i=1
+    d_list=[]
+    prime_list=[]
+    for num in numbers:
+        if num<2:
+            continue
+        else:   
+            while i!=(num+1):
+                if num%i==0:
+                    d_list.append(i)
+                i+=1
+                    
+            if len(d_list)==2:
+                prime_list.append(num)
+        d_list=[]
+        i=1
+    print(prime_list)    
+    
+    
+
+#5: 5th way:
+
+number=39
+if number<2:
+    print('please enter the valid number')
+else:
+    for i in range(2,number):
+        if number%i==0:
+            print(str(number)+' is not a prime number')
+            break
+    else:
+        print(str(number)+' is a prime number')
+        
+
